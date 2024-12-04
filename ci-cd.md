@@ -65,8 +65,18 @@ Examples:
   - Cons: difficult to set up & high cost method of User Acceptance Testing.
 
 ## <a id="blue-green"></a>Blue Green Deployment
-## Key mechanism
-- The router: direct traffics to new/old version depending on configurations. Router options:
+## The router: 
+- Key mechanism that directs traffics to new/old version depending on configurations.
     - Load Balancer: let us switch from front end to back end immediately
     - CDN: Offer a way to switch files immediately
     - DNS: common route but slow process due to DNS propagation and long TTL.
+## Blue Green Deployment sequence:
+1. `Compile`: Compile and create artifact
+2. `Run Tests`: Run unit and/or integration tests
+3. `Provision`: create Green infrastructure, cofiguring instances, migrating DB, etc.
+4. `Deploy`: Copy artifact files to instance
+5. `Smoke Test`: Run a few tests that don't impact the production servers
+6. `Switch The Router`: Redirect traffic to new version
+7. `Run Sanity Test`: Run a few tests that don't impact the productions servers
+8. `Roll back` / `Destroy Old Realeas Environment`: if failed, switch the router back to the Blue version and clean up Green. Otherwise, clean up Blue environment and switch traffics to Green.
+9. `Notify The Team`: Confirm that the deployment is successful.
