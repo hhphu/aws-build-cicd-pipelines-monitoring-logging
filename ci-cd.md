@@ -1,7 +1,8 @@
 # Continuous Integration and Continuous Deployment
 
-1. [Fundamentals of CI/CD](#fundamentals-of-ci/cd)
-2. [Benefits of CI/CD](#benefits-of-ci/cd)
+1. **[Fundamentals of CI/CD](#fundamentals-of-ci/cd)**
+2. **[Benefits of CI/CD](#benefits-of-ci/cd)**
+3. **[Best Practices](#best-practices)**
 
 ## <a id="fundamentals-of-ci/cd"></a>Fundamentals of CI/CD
 ### Continuous Integration:
@@ -29,8 +30,17 @@
 
 ## <a id="benefits-of-ci/cd"></a>Benefits of CI/CD
 It's crucial to be able to communicate with business and stakeholders. Use the `Values Framework` for the best translation.
+
 **Values Framework** - includes one of these four terms when communicating with stakeholders: `reduce cost`,`avoid cost`,`increase revenue`, `protect revenue`
 
 Examples:
 
 ![image](https://github.com/user-attachments/assets/d79fc0a6-bacd-4bc4-9622-c95417126398)
+
+![image](https://github.com/user-attachments/assets/921158b1-a625-48f0-b0a7-e42810809816)
+
+## <a id="best-practices"></a>Best Practices
+- `Fail Fast`- set up CI/CD to find failures. The faster we find them, the quicker we fix them.
+- `Measure quality`- Measure code quality so we evaluate if the codes are high quality
+- `Only Road to Production`- if CI/CD is deploying to Production, it should be the only way -> easier to manage and improve and monitor.
+- `Config in code` - configuration coddes must be in code and versioned alongside your production code. This includes CI/CD configuration files.
