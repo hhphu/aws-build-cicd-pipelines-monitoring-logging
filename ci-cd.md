@@ -5,6 +5,7 @@
 3. **[Best Practices](#best-practices)**
 4. **[Deployment Strategies](#deployment-strategies)**
 5. **[Blue Green Deployment](#blue-green)**
+6. **[Key Terms](#key-terms)**
 
 ## <a id="fundamentals-of-ci/cd"></a>Fundamentals of CI/CD
 ### Continuous Integration:
@@ -19,16 +20,17 @@
 
 ![](https://video.udacity-data.com/topher/2020/July/5f0c9a06_screen-shot-2020-07-13-at-10.26.22-am/screen-shot-2020-07-13-at-10.26.22-am.png)
 
-### Key terms
-- **Pipeline:** A series of automated steps that build, test, and deploy software changes from development to production
-- **Continuous Integration:** The practice of merging all developers' working copies to a shared mainline several times a day.
-- **Continuous Delivery:** An engineering practice in which teams produce and release value in short cycles.
-- **Continuous Deployment:** A software engineering approach in which the value is delivered frequently through automated deployments.
-- **Infrastructure as Code:** The management of infrastructure using code.
-- **Provisioning:** The process of setting up IT infrastructure.
-- **Artifact:** A product of some process applied to the code repository.
-- **DevOps:** A set of practices that works to automate and integrate the processes between software development and IT teams.
-- **Testing:** A practice that seeks to ensure the quality of the software.
+**Stages:** categories of jobs within the CI/CD pipelines:
+- **Build**: Everything that has to do with making code executable in Production
+- **Test**: Run alll automated tests that verify the code level
+- **Analyze**: any sttic analysis on the code/checking dependencies
+- **Deploy**: Anything to do with creating server instances or copying pre-built application files to an instance.
+- **Verify**: any test that can be run against a running instance of the application, often against a pre-production instance.
+- **Promote**: replace the current production environment with the new versions.
+- **Revert**: Roll back/undo changes when the verification fails.
+
+**Jobs:** sets of instructions to do the work of CI/CD + environments where the instructions are performed.
+**Steps:** instructions within the jobs. Also have environments to run.
 
 ## <a id="benefits-of-ci/cd"></a>Benefits of CI/CD
 It's crucial to be able to communicate with business and stakeholders. Use the `Values Framework` for the best translation.
@@ -65,12 +67,12 @@ Examples:
   - Cons: difficult to set up & high cost method of User Acceptance Testing.
 
 ## <a id="blue-green"></a>Blue Green Deployment
-## The router: 
+### The router: 
 - Key mechanism that directs traffics to new/old version depending on configurations.
     - Load Balancer: let us switch from front end to back end immediately
     - CDN: Offer a way to switch files immediately
     - DNS: common route but slow process due to DNS propagation and long TTL.
-## Blue Green Deployment sequence:
+### Blue Green Deployment sequence:
 1. `Compile`: Compile and create artifact
 2. `Run Tests`: Run unit and/or integration tests
 3. `Provision`: create Green infrastructure, cofiguring instances, migrating DB, etc.
@@ -80,3 +82,14 @@ Examples:
 7. `Run Sanity Test`: Run a few tests that don't impact the productions servers
 8. `Roll back` / `Destroy Old Realeas Environment`: if failed, switch the router back to the Blue version and clean up Green. Otherwise, clean up Blue environment and switch traffics to Green.
 9. `Notify The Team`: Confirm that the deployment is successful.
+
+## <a id="key-terms"></a>Key terms
+- **Pipeline:** A series of automated steps that build, test, and deploy software changes from development to production
+- **Continuous Integration:** The practice of merging all developers' working copies to a shared mainline several times a day.
+- **Continuous Delivery:** An engineering practice in which teams produce and release value in short cycles.
+- **Continuous Deployment:** A software engineering approach in which the value is delivered frequently through automated deployments.
+- **Infrastructure as Code:** The management of infrastructure using code.
+- **Provisioning:** The process of setting up IT infrastructure.
+- **Artifact:** A product of some process applied to the code repository.
+- **DevOps:** A set of practices that works to automate and integrate the processes between software development and IT teams.
+- **Testing:** A practice that seeks to ensure the quality of the software.
