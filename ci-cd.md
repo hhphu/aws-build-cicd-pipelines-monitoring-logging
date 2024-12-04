@@ -3,6 +3,7 @@
 1. **[Fundamentals of CI/CD](#fundamentals-of-ci/cd)**
 2. **[Benefits of CI/CD](#benefits-of-ci/cd)**
 3. **[Best Practices](#best-practices)**
+4. **[Deployment Strategies](#deployment-strategies)**
 
 ## <a id="fundamentals-of-ci/cd"></a>Fundamentals of CI/CD
 ### Continuous Integration:
@@ -44,3 +45,20 @@ Examples:
 - `Measure quality`- Measure code quality so we evaluate if the codes are high quality
 - `Only Road to Production`- if CI/CD is deploying to Production, it should be the only way -> easier to manage and improve and monitor.
 - `Config in code` - configuration coddes must be in code and versioned alongside your production code. This includes CI/CD configuration files.
+
+
+## <a id="deployment-strategies"></a>Deployment Strategies
+- `Big Bang` - also known as no strategies at all, simply replacing old versions with new versions.
+  - Pros: simplest to understand and perform
+  - Cons:
+      - Downtime when replacing old version with new version
+      - Encrouages teams to batch up cahnges into a large deploy event -> require more testing -> slower to market
+- `Blue Green` - Two Production versions: old version (Blue) and new version (Green). Traffics are routed to old version while the new version is being tested. Once the test is completed, all traffic are routed to the new version (Green).
+  - Pros: fast rollback, no disturbance to the old version
+  - Cons: high infrastructure cost
+- `Canary` - Similar to `Blue Green` deployment. When the new version is deployed, traffics still route users to the versions. The router will slowly direct a small amount of traffic to the new version while the team monitors the new version. Slowly, the traffics are all routed to new versions.
+  - Pros: easy to roll back and damage only affect a small portion of users
+  - COns: High infrastructure cost and difficult to set up and maitain
+- `A/B Testing` - Test the new version with a set of users. Once we get the users' feedbacks, we can decide to adapt the new version or roll back to the old version
+  - Pros: Get direct feedbacks from users
+  - Cons: difficult to set up & high cost method of User Acceptance Testing.
