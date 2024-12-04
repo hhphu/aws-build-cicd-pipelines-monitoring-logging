@@ -4,6 +4,7 @@
 2. **[Benefits of CI/CD](#benefits-of-ci/cd)**
 3. **[Best Practices](#best-practices)**
 4. **[Deployment Strategies](#deployment-strategies)**
+5. **[Blue Green Deployment](#blue-green)**
 
 ## <a id="fundamentals-of-ci/cd"></a>Fundamentals of CI/CD
 ### Continuous Integration:
@@ -62,3 +63,10 @@ Examples:
 - `A/B Testing` - Test the new version with a set of users. Once we get the users' feedbacks, we can decide to adapt the new version or roll back to the old version
   - Pros: Get direct feedbacks from users
   - Cons: difficult to set up & high cost method of User Acceptance Testing.
+
+## <a id="blue-green"></a>Blue Green Deployment
+## Key mechanism
+- The router: direct traffics to new/old version depending on configurations. Router options:
+    - Load Balancer: let us switch from front end to back end immediately
+    - CDN: Offer a way to switch files immediately
+    - DNS: common route but slow process due to DNS propagation and long TTL.
