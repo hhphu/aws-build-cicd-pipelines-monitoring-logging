@@ -61,3 +61,48 @@ Continuous Integation is important to:
     - Require diligent branch management to avoid confusion and maintain the main branch clean
     - Can be challenging if the feature branch is not up to date compared to the main branch.
   
+## Github Actions
+One of the most common CI/CD Tools:
+- Easy to use
+- Integrated to Github -> no need to set up
+- Highly cusomizable to meet different requirements.
+- Free to use
+
+**Workflow**: series of steps executed when an event triggers on a git repository.
+
+To create a workflow: 
+1. In the root repository, create a folder **.github**
+2. Inside the **.github** folder, create another folder called **workflows**
+3. Create a **.yml** file for the workflow **first_workflow.yml**. The file should look like this
+
+![image](https://github.com/user-attachments/assets/d652e597-44e3-44ae-8f7c-088dd27ddf18)
+
+#### TRIGGERS
+- **`Manual Triggers`**: Users manually click the **Run Workflow** button. 
+
+![image](https://github.com/user-attachments/assets/67d2c045-5daf-4861-a2b6-7147ff836fe1)
+
+Note: To manually trigger the workflow, the `workflow_dispatch` must be included in the yml file.
+
+![image](https://github.com/user-attachments/assets/faefee2f-f108-4209-b6d5-5397d724108a)
+
+- **`Automatic Triggers`**: The workflow triggers whenever the predefined conditions are met. For example, the below workflow triggers whenever there is a new commit to the repository
+
+  ![image](https://github.com/user-attachments/assets/b6243903-9e25-4865-8339-26852a95ad4b)
+
+- **`Scheduled Triggers`**: Set specific time to trigger the workflow. The yml uses the crons jobs notations, which looks like this:
+
+  ![image](https://github.com/user-attachments/assets/e106e93c-f06f-4730-a63c-73c60210f853)
+
+
+#### EVENTS
+Github Actions responds to a number of events:
+- **push** - This event occurs when a new commit is pushed to GitHub.
+- **pull_request** - This event occurs when a pull request is opened or merged.
+- **issues** - This event occurs when an issue is opened, changed, deleted, closed
+- **check run** - This event occurs when a check run is created or completed.
+- **check suite** - This event occurs when a check suite is created or completed.
+- **deployment** - This event occurs when a deployment is created or completed.
+- **deployment status** - This event occurs when a deployment status is changed.
+
+  
