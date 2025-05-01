@@ -93,3 +93,15 @@ Examples:
 - **Artifact:** A product of some process applied to the code repository.
 - **DevOps:** A set of practices that works to automate and integrate the processes between software development and IT teams.
 - **Testing:** A practice that seeks to ensure the quality of the software.
+
+## Free Response
+**Choose one benefit of CI/CD and write a short paragraph to convince a non-technical boss using non-technical language.**
+
+```
+"Implementing CI/CD can significantly enhance our team's efficiency by allowing us to release updates and new features more quickly and reliably. Imagine if we could make small improvements to our product every few days instead of waiting weeks or months for a big release. This means we can respond to customer feedback faster, fix issues more promptly, and keep our users happy. By streamlining our development process, we not only save time but also ensure that our product is always evolving to meet the needs of our customers.
+```
+
+**Choose another benefit of CI/CD and write a short paragraph to convince a non-technical boss using non-technical language.**
+```
+One of the key advantages of CI/CD is that it helps us catch and fix problems early in the development process. Think of it like a safety net that ensures we identify issues before they become major headaches. By regularly testing our code as we make changes, we can quickly spot any errors and address them right away. This not only saves us time and resources in the long run but also ensures that our product remains stable and reliable for our users. In essence, CI/CD allows us to deliver a higher quality product, which ultimately leads to greater customer satisfaction and trust.
+```
