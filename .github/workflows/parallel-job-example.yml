@@ -58,7 +58,7 @@ jobs:
         run: echo "This is not the main branch."
 
       - name: Run tests
-        working-directory: aws-build-cicd-pipelines-monitoring-logging
+        working-directory: ${{ github.workspace }}
         run: npm test
 
       - name: Debug message
