@@ -48,6 +48,8 @@ jobs:
 
       - name: Greet users
         uses: hhphu/hhphu-greeting-users@main
+        with:
+          name: "hhphu"
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
