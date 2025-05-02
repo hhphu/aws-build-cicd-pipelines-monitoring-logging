@@ -44,16 +44,11 @@ jobs:
       - name: Set up Node.js 
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
-        working-directory: ${{ github.workspace }}/aws-build-cicd-pipelines-monitoring-logging
-        run: |
-          pwd
-          npm install
+      - name: Greet users
+        uses: hhphu/hhphu-greeting-users@main
+        with:
+          name: "Build 1"
           
-      - name: Run tests
-        working-directory: ${{ github.workspace }}/aws-build-cicd-pipelines-monitoring-logging
-        run: npm test
-
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
         run: echo "This is the main branch."
@@ -86,7 +81,7 @@ jobs:
       - name: Greet users
         uses: hhphu/hhphu-greeting-users@main
         with:
-          name: "hhphu"
+          name: "Build 2"
 
       - name: Debug message
         if: env.DEBUG == 'true'
