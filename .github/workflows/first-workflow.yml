@@ -9,14 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-
-  - name: Use Node.js 18
-    uses: actions/setup-node@v4
-    with: 
-      node-version: 18
-
-  - name: Print a message
-    run: echo "Hello, world!"
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+  
+    - name: Use Node.js 18
+      uses: actions/setup-node@v4
+      with: 
+        node-version: 18
+  
+    - name: Print a message
+      run: echo "Hello, world!"
