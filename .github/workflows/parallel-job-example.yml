@@ -46,7 +46,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          ls -la
+          ls -la ../
           npm install
           
       - name: Run tests
