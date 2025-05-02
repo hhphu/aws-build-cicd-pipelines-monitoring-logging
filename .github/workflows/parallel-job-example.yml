@@ -45,11 +45,11 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        run: |
-          ls -la ../
-          npm install
+        working-directory: aws-build-cicd-pipelines-monitoring-logging
+        run: npm install
           
       - name: Run tests
+        working-directory: aws-build-cicd-pipelines-monitoring-logging
         run: npm test
 
       - name: Print a message for main branch
