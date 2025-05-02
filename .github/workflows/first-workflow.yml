@@ -46,6 +46,9 @@ jobs:
         with:
           node-version: latest
 
+      - name: Greet users
+        uses: hhphu/hhphu-greeting-users@main
+
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
         run: echo "This is the main branch."
