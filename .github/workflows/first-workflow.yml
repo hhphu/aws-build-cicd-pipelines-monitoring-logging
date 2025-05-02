@@ -22,6 +22,19 @@ on:
 
 # Jobs defined in the workflow
 jobs:
+
+########################################################################################
+# Matrix strategy: allow the job to run multiple times with different variables
+#  matrix_example:
+#    runs-on: ubuntu-latest
+#    strategy: 
+#      matrix:
+#        node-version: [14,16,18]
+#    steps:
+#      uses: actions/checkout@v4
+#      run: node -v
+########################################################################################
+
   build-and-test-1:
     runs-on: ubuntu-latest
     steps:
