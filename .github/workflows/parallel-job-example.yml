@@ -45,15 +45,12 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          ls -la
 
       - name: Run tests
         run: npm test
-
-      - name: Greet users
-        uses: hhphu/hhphu-greeting-users@main
-        with:
-          name: "hhphu"
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
@@ -75,8 +72,6 @@ jobs:
 
       - name: Set up Node.js 
         uses: actions/setup-node@v4
-        with:
-          node-version: latest
 
       - name: Print a message for main branch
         if: github.ref == 'refs/heads/main'
@@ -86,8 +81,10 @@ jobs:
         if: github.ref != 'refs/heads/main'
         run: echo "This is not the main branch."
 
-      - name: Run tests
-        run: npm test
+      - name: Greet users
+        uses: hhphu/hhphu-greeting-users@main
+        with:
+          name: "hhphu"
 
       - name: Debug message
         if: env.DEBUG == 'true'
