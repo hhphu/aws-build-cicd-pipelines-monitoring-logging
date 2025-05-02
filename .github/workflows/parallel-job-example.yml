@@ -58,7 +58,6 @@ jobs:
         run: echo "This is not the main branch."
 
       - name: Run tests
-        working-directory: ${{ github.workspace }}
         run: ls -la
 
       - name: Debug message
