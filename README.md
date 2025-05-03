@@ -9,6 +9,8 @@ In this course, you will learn how to stretch for Continuous Delivery as your â€
 - **[Building a Continuous Integration Pipeline](./build-ci-pipeline.md)**
 - **[Github Actions with AWS Cloud Formation](./github-action-with-aws-cloud-formation.md)**
 - **[Github Actions with Terraform](./github-action-with-terraform.md)**
+- **[Serverless Deployment](./serverless-deployment.md)**
+- **[Kubernetes Deployment](./kubernetes-deployment.md)**
 
 ## Projects
 
