@@ -2,7 +2,8 @@
 
 - Cloudformation Template
 
-```yml
+```Cloudformation Template
+
 AWSTemplateFormatVersion: 2010-09-09
 Description: Create an S3 bucket
 Resources:
