@@ -10,5 +10,5 @@ In this course, you will learn how to stretch for Continuous Delivery as your â€
 
 ## Projects
 
-- **[Build a custom Github Actions](./https://github.com/hhphu/hhphu-greeting-users)**
+- **[Build a custom Github Actions](https://github.com/hhphu/hhphu-greeting-users)**
 - **[CI for Fullstack App](https://github.com/hhphu/CI-FullstackApp/tree/main)**
