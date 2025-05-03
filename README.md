@@ -6,6 +6,12 @@ In this course, you will learn how to stretch for Continuous Delivery as your â€
 ## Concepts
 
 - **[Continuous Integration and Continuous Deployment](#continuous-integration-and-continuous-deployment)**
+    1. **[Fundamentals of CI/CD](#fundamentals-of-ci/cd)**
+    2. **[Benefits of CI/CD](#benefits-of-ci/cd)**
+    3. **[Best Practices](#best-practices)**
+    4. **[Deployment Strategies](#deployment-strategies)**
+    5. **[Blue Green Deployment](#blue-green)**
+    6. **[Key Terms](#key-terms)**
 - **[Building a Continuous Integration Pipeline](./build-ci-pipeline.md)**
 - **[Github Actions with AWS Cloud Formation](./github-action-with-aws-cloud-formation.md)**
 - **[Github Actions with Terraform](./github-action-with-terraform.md)**
@@ -14,12 +20,7 @@ In this course, you will learn how to stretch for Continuous Delivery as your â€
 
 ### Continuous Integration and Continuous Deployment
 
-1. **[Fundamentals of CI/CD](#fundamentals-of-ci/cd)**
-2. **[Benefits of CI/CD](#benefits-of-ci/cd)**
-3. **[Best Practices](#best-practices)**
-4. **[Deployment Strategies](#deployment-strategies)**
-5. **[Blue Green Deployment](#blue-green)**
-6. **[Key Terms](#key-terms)**
+
 
 ## <a id="fundamentals-of-ci/cd"></a>Fundamentals of CI/CD
 ### Continuous Integration:
