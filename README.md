@@ -7,8 +7,11 @@ In this course, you will learn how to stretch for Continuous Delivery as your â€
 
 - **[Continuous Integration and Continuous Deployment](./ci-cd.md)**
 - **[Building a Continuous Integration Pipeline](./build-ci-pipeline.md)**
+- **[Github Actions with AWS Cloud Formation](./github-action-with-aws-cloud-formation.md)**
+- **[Github ACtions with Terraform](./github-action-with-terraform.md)**
 
 ## Projects
 
 - **[Build a custom Github Actions](https://github.com/hhphu/hhphu-greeting-users)**
 - **[CI for Fullstack App](https://github.com/hhphu/CI-FullstackApp/tree/main)**
+
